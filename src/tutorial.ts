@@ -1,25 +1,23 @@
-// let name: string = "omeir";
-// name = "hello";
-// //name = 20; will give error
+// let tax: number | string = 10;
+// tax = "100";
 
+// let requestStatus: 'pending' | 'success' | 'error' = 'pending';
+// let str:string = "pending";
 
-// let amount:number = 20;
-// // amount = 'hello'; error
+// let foundNumber : string | undefined;
+// let numbers:any = ["1", "2", "3", "4"];
 
-// let flag: boolean = true;
-// flag = Boolean(1);
-// flag = Boolean("hello");
+// for(let number of numbers){
+//     if(number === "1"){
+//         foundNumber = number;
+//     }
+// }
 
-// console.log(name, amount, flag)
-// ;
+// foundNumber?.length//automatically adds optional change
 
+let orderStatus: 'processing' | 'shipping' | 'delivered' = 'processing';
+// orderStatus = 'shipped';//error
+orderStatus = 'delivered';
 
-let str: string = "omeir";
-console.log(str.toUpperCase());
-console.log(str.codePointAt(1));
-
-let num: number = 1;
-console.log(num * 10);
-
-let flag: boolean = true;
-console.log(true == flag);
+let discount: number | string = 20;
+discount = "20%";
