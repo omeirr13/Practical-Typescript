@@ -1,23 +1,17 @@
-// let tax: number | string = 10;
-// tax = "100";
+// let prices: number[] = [100, 75, 42];
+// prices = [...prices, 101];
 
-// let requestStatus: 'pending' | 'success' | 'error' = 'pending';
-// let str:string = "pending";
+// console.log(prices);
 
-// let foundNumber : string | undefined;
-// let numbers:any = ["1", "2", "3", "4"];
 
-// for(let number of numbers){
-//     if(number === "1"){
-//         foundNumber = number;
-//     }
-// }
+// let fruit : string[] = ['apple', 'orange'];
 
-// foundNumber?.length//automatically adds optional change
+// let randomValues: number[] = [];
 
-let orderStatus: 'processing' | 'shipping' | 'delivered' = 'processing';
-// orderStatus = 'shipped';//error
-orderStatus = 'delivered';
+// let names = ['peter', 'susan', 1, true];//will have union typelet names: (string | number | boolean)[]
 
-let discount: number | string = 20;
-discount = "20%";
+// let array : (string | number)[] = ['hello', 1];
+
+// let temperatures: number[] = [1,2,3,4, "hello"];
+// let colors: string[] = ["red", "yellow", true];
+// let mixedArray : (string | number)[] = ["1",1,true];

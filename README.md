@@ -1,2 +1,3 @@
-- Create a variable orderStatus of type 'processing' | 'shipped' | 'delivered' and assign it the value 'processing'. Then, try to assign it the values 'shipped' and 'delivered'.
-- Create a variable discount of type number | string and assign it the value 20. Then, try to assign it the value '20%'.
+- Create an array temperatures of type number[] and assign it some values. Then, try to add a string value to it.
+- Create an array colors of type string[] and assign it some values. Then, try to add a boolean value to it.
+- Create an array mixedArray of type (number | string)[] and assign it some values. Then, try to add a boolean value to it.
