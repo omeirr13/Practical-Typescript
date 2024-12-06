@@ -1,17 +1,13 @@
-// let prices: number[] = [100, 75, 42];
-// prices = [...prices, 101];
+let car: {brand: string, year:number} = {
+    brand: 'toyota',
+    year: 2024,
+}
 
-// console.log(prices);
+let book = {title: 'book', cost: 20};
+let pen = {title: 'pen', cost:20};
+let notebook = {title:'notebook'};//have to make sure all have same keys and values have same type
 
 
-// let fruit : string[] = ['apple', 'orange'];
-
-// let randomValues: number[] = [];
-
-// let names = ['peter', 'susan', 1, true];//will have union typelet names: (string | number | boolean)[]
-
-// let array : (string | number)[] = ['hello', 1];
-
-// let temperatures: number[] = [1,2,3,4, "hello"];
-// let colors: string[] = ["red", "yellow", true];
-// let mixedArray : (string | number)[] = ["1",1,true];
+let items : {readonly title:string, cost?: number}[] = [book, pen, notebook];
+// items[0].title = "hello";
+// we can also have optional properties
