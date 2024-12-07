@@ -1,14 +1,31 @@
-const processData = (input: string | number, config: {reverse: boolean} = {reverse:false}): string | number | void => {
-    if(typeof(input) === "number"){
-        return input**2;
-    }
-    else if(typeof(input) === "string"){
-        let upper = input.toUpperCase();
-        if(config.reverse){
-            upper =  upper.split('').reverse().join('');
-        }
-        return upper;
-    }
+type User = {id: number, name: string, isActive: boolean};
+
+const john : User ={
+    id: 1,
+    name: "john",
+    isActive: true
 }
 
-console.log(processData(9));
+const susan : User ={
+    id: 1,
+    name: "susan",
+    isActive: true
+}
+
+function createUser(...users: User[]): User[]{
+    users.forEach((user)=>{
+        console.log(`Hello there ${user.name.toUpperCase()} !!!`);
+    })
+    return users;
+}
+
+createUser(susan, john);
+
+type Theme = 'light' | 'dark';
+let theme:Theme = 'dark';
+
+function setTheme(t: Theme){
+    theme = t;
+}
+
+setTheme(theme);
