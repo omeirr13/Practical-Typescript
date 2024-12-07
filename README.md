@@ -1,3 +1,3 @@
--Create an object bike of type { brand: string, year: number } and assign it some values. Then, try to assign a string to the year property.
--Create an object laptop of type { brand: string, year: number } and try to assign an object with missing year property to it.
--Create an array products of type { title: string, price?: number }[] and assign it some values. Then, try to add an object with a price property of type string to it.
+- Create a new array of names.
+- Write a new function that checks if a name is in your array. This function should take a name as a parameter and return a boolean.
+- Use this function to check if various names are in your array and log the results.
