@@ -1,41 +1,24 @@
-// let car: {brand: string, year:number} = {
-//     brand: 'toyota',
-//     year: 2024,
-// }
-
-// let book = {title: 'book', cost: 20};
-// let pen = {title: 'pen', cost:20};
-// let notebook = {title:'notebook'};//have to make sure all have same keys and values have same type
-
-
-// let items : {readonly title:string, cost?: number}[] = [book, pen, notebook];
-// // items[0].title = "hello";
-// // we can also have optional properties
-
-
-let bike : {brand: string, year: number} = {
-    brand: "toyota",
-    year: 2024
+//implicity will get type any.
+const sayHi = (name: string) => {
+    console.log(`Hello ${name.toUpperCase()}`);
 }
 
-// bike.year = "2024"; string is not assinable to number
-// bike.ok//ok does not exist
+sayHi("omeir");
 
-// let laptop: {brand: string, year: number} = {
-//     brand: "lenovo",
-// }
-//cant do above
-let laptop: {brand: string, year?: number} = {
-    brand: "lenovo",
+
+const calculateDiscount = (price: number): number => {
+    return price * 0.9;
 }
-console.log(laptop);
 
-let products : {title: string, price ?: number}[] = [
-    {
-        title: "laptop",
-        price: 1000,
-    },
-    {
-        title: "headphones",
-    }
-]
+const finalPrice: number = calculateDiscount(200);
+console.log(finalPrice);
+
+
+// function addThree(number: any){
+//     let num2: number = 3;
+//     return num2 + number;
+// }
+
+// const ans = addThree(3);
+// console.log(typeof(ans));
+// ans.toUpperCase();
