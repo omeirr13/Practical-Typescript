@@ -1,23 +1,17 @@
-// let tax: number | string = 10;
-// tax = "100";
+function createEmployee({ id }: { id: number }): { id: number; isActive: boolean } {
+    return { id: 1, isActive: id % 2 == 0 };
+};
 
-// let requestStatus: 'pending' | 'success' | 'error' = 'pending';
-// let str:string = "pending";
+const obj: { id: number, isActive: boolean } = createEmployee({ id: 1 });
 
-// let foundNumber : string | undefined;
-// let numbers:any = ["1", "2", "3", "4"];
 
-// for(let number of numbers){
-//     if(number === "1"){
-//         foundNumber = number;
-//     }
-// }
+function createStudent(student: {id: number; name: string}): void {
+    console.log(`Welcome to the course ${student.name.toUpperCase()}!!!`);
+}
 
-// foundNumber?.length//automatically adds optional change
-
-let orderStatus: 'processing' | 'shipping' | 'delivered' = 'processing';
-// orderStatus = 'shipped';//error
-orderStatus = 'delivered';
-
-let discount: number | string = 20;
-discount = "20%";
+const student = {
+    id: 1,
+    name: "omeir"
+}
+createStudent({id: 1, name: "omeir"});//inline matches exactly
+createStudent(student);//this will go ..it just wants the ones to match, extra can come..
