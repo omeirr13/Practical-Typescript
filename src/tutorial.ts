@@ -1,31 +1,28 @@
-type User = {id: number, name: string, isActive: boolean};
+type Employee = { id: number, name: string, department: string };
+type Manager = { id: number, name: string, employees: Employee[] };
 
-const john : User ={
-    id: 1,
-    name: "john",
-    isActive: true
+type Staff = Employee | Manager;
+
+
+const printStaffDetails = (staff: Staff) => {
+    if('employees' in staff){
+        console.log(`You are a manger, you manage ${staff.employees.length} employees.`);
+    }
+    else{
+        console.log(`You are an employee, your name is ${staff.name} you work in department ${staff.department}`);
+    }
 }
 
-const susan : User ={
-    id: 1,
-    name: "susan",
-    isActive: true
-}
+let omeir : Employee = {id: 1, name: "omeir", department: "IT"};
+let omar : Employee = {id: 2, name: "omar", department: "IT"};
 
-function createUser(...users: User[]): User[]{
-    users.forEach((user)=>{
-        console.log(`Hello there ${user.name.toUpperCase()} !!!`);
-    })
-    return users;
-}
+let belawal : Manager = {id: 3, name: "belawal", employees: [omeir, omar]};
 
-createUser(susan, john);
 
-type Theme = 'light' | 'dark';
-let theme:Theme = 'dark';
+const employees : Staff[] = [omeir, omar, belawal];
 
-function setTheme(t: Theme){
-    theme = t;
-}
+employees.forEach((employee)=>{
+    printStaffDetails(employee);
+})
 
-setTheme(theme);
+
